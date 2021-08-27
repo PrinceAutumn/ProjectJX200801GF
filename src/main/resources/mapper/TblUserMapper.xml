@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+          public "-//mybatis.org//DTD Mapper 3.0//EN"
+          "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="aa">
+    <insert id="addTbluser" parameterType=""com.ckcj.entity.Tbluser">
+    insert into tbluser(rid,uname,upwd,money,phone)
+    values(#{rid},#{uname},#{upwd},#{money},#{phone})
+    </insert>
+    <delete id="delTblUser"parameterType="java.lang.String">
+    delete from tbluser where userid = #{uid}
+    </delete>
+    <!-- Invoke 'Generate' action to add tags or functions -->
+    <update id="updateTblUser"ParameterType="java,lang.Map">
+        update tbluser set upwd=#{upwd} where usersid=#{userid}
+    </update>
+    <select id="findTblUser" resultType="com.ckcj.entity.tblUser">
+        select*from tbluser where uname like concat(“%”,#{uname},"%");
+    </select>
+    <select id="udpateTblUser" rarameterType="com.ckcj.entity.tblUser">
+        select*from tbluser where uname=#{uname} andupwd=#{upwd}
+    </select>
+</mapper>

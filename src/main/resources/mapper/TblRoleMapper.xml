@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE mapper
+        PUBLIC ?-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mappper.dtd>
+        <mapper namespace="com.ckcj.mapper.tblRoleMapper">
+        <select id="findRoleUsers" parameterType="String"resultMap="rold"
+        <mapper namespace="aa">
+            <insert id="addTblUser" parmeterType="com.ckcj.entity.Tbluser">
+                    insert into tbluser(rid,uname,upwd,money,phone)
+                    values(#{rid},#{uname},#{upwd},#{money}#{phone})
+
+        <select id="findRoleUsers"parmeterType="String"resultMap="roldUserMap">
+        select*from tbluser u,tblrole r where u.rid and  r.rid=#{rid}
+        </select>
+        <select id="findRoleUsers"parameterType="String" ResultMap="roldUserMap">
+        </select>
+
+        </mapper>
